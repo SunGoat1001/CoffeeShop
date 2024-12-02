@@ -4,7 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\Product;
-use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -19,7 +19,10 @@ class ProductController extends Controller
                 $query->with(explode(',', $with));
             })
             ->when(request('search'), function (Builder $query, $search) {
-                return $query->where('name', 'like', '%'.$search);
+                return $query->where('name', 'like', '%'.$search.'%');
+            })
+            ->when(request('sort'), function (Builder $query) {
+                return $query->orderBy('price', 'asc');
             });
 
         return $query->simplePaginate();
