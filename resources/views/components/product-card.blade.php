@@ -1,5 +1,5 @@
 <div x-data="{}" class="flex flex-row bg-surface p-3 w-full cursor-pointer hover:shadow-xl rounded"
-    @click="Livewire.emit('USER_SELECT_PRODUCT_EVENT', {{ $product->id }})">
+    @click="$dispatch('USER_SELECT_PRODUCT_EVENT', { product_id: {{ $product->id }} })">
     <div class="flex-shrink-0">
         <img class="object-cover h-28 w-28 rounded" src="{{ asset($product->display_image_url) }}" alt="product image" />
     </div>
