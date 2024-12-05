@@ -14,7 +14,7 @@ class ProductSeeder extends Seeder
             'id' => 1,
             'category_id' => 1,
             'name' => 'Black phin coffee',
-            'description' => 'Vietnamese Black Phin Coffee is a traditional coffee brewed using a small metal drip filter, known as a phin. This method produces a rich, bold, and intensely aromatic coffee, typically served black without sugar or milk. It highlights the deep, earthy flavors of Vietnamese coffee beans, often made from robusta for an extra caffeine kick and unique bitterness. Perfect for coffee purists who appreciate slow-brewed perfection!',
+            'description' => 'Perfect for coffee purists who appreciate slow-brewed perfection!',
             'price' => 10000,
             'display_image_url' => 'https://www.shutterstock.com/shutterstock/photos/2273287209/display_1500/stock-vector-vietnamese-coffee-illustration-the-dripper-also-called-a-phin-caphe-phin-vector-graphics-2273287209.jpg',
         ],
@@ -22,7 +22,7 @@ class ProductSeeder extends Seeder
             'id' => 2,
             'category_id' => 1,
             'name' => 'White phin coffee',
-            'description' => 'Vietnamese drip coffee with condensed milk is a beloved traditional beverage that embodies the essence of Vietnamese coffee culture. Made using a small metal drip filter (phin), the coffee slowly brews into a cup layered with rich, creamy condensed milk. The result is a perfect balance of bold coffee flavor and sweet, velvety richness. Often served over ice, it’s both a refreshing treat and a cherished morning ritual.',
+            'description' => 'Often served over ice, it’s both a refreshing treat and a cherished morning ritual.',
             'price' => 12000,
             'display_image_url' => 'https://www.shutterstock.com/shutterstock/photos/2269792185/display_1500/stock-vector-coffee-with-condensed-milk-in-glass-cups-vietnamese-coffee-maker-vietnamese-coffee-illustration-2269792185.jpg',
         ],
@@ -38,9 +38,17 @@ class ProductSeeder extends Seeder
             'id' => 4,
             'category_id' => 2,
             'name' => 'White roasted coffee',
-            'description' => 'Vietnamese roasted coffee with milk is a harmonious blend of robust, dark-roasted coffee and creamy sweetened condensed milk. The coffee is brewed slowly, often using a traditional drip filter, allowing its rich aroma and bold flavors to shine. Paired with the smooth sweetness of the milk, it creates a perfect balance, making it a beloved choice for coffee lovers worldwide.',
+            'description' => 'Paired with the smooth sweetness of the milk, it creates a perfect balance, making it a beloved choice for coffee lovers worldwide.',
             'price' => 14000,
             'display_image_url' => 'https://png.pngtree.com/png-vector/20240206/ourlarge/pngtree-watercolor-ibrik-coffee-png-image_11664653.png',
+        ],
+        [
+            'id' => 5,
+            'category_id' => 1,
+            'name' => 'Bac Xiu coffee',
+            'description' => 'Experience the perfect balance of rich coffee and creamy sweetness with a refreshing cup of Bạc Xỉu, a true Vietnamese delight.',
+            'price' => 15000,
+            'display_image_url' => 'asset\img\Bac_xiu.png',
         ],
     ];
 
@@ -57,6 +65,6 @@ class ProductSeeder extends Seeder
             Product::create($product);
         }
 
-        Product::factory()->count(1000)->create();
+        // Product::factory()->count(1000)->create();
     }
 }
